@@ -1,0 +1,18 @@
+<form class=container>
+
+    <div class="form-group">
+      <label for="firstName">Your Name</label>
+      <input ngModel required name="firstname" #firstname="ngModel" id="firstName" (change)="logName(firstname)" type="text" class="form-control">
+     <div class="alert alert-danger" *ngIf="!firstname.valid" > First name is Required </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Your Message</label>
+
+      <input required ngModel name="comment" #comment="ngModel" (change)="logComment(comment)" id="comment" class="form-control">
+      <div  class="alert alert-danger" *ngIf="!comment.valid" > Field name is Required </div>
+    </div>
+    <button (click)="verify()"  class="btn btn-primary" >Submit</button>
+
+
+</form>

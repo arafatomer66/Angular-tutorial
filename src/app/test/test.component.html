@@ -1,0 +1,60 @@
+<div style="text-align: center;">
+  <!--  interpolation -->
+  <!-- Myself {{name.toUpperCase()}} -->
+  {{helloUser()}} <br><br>
+
+  <h3 [class.text-danger] = "false"  >Your Name is BDev</h3>
+  <h4 [ngClass]="classMessage" >I am From BD</h4>
+ <!-- class binding -->
+ <!-- propertry binding -->
+  <input [class]='isStatus' [id]="textId"  type="text" [value]="myName" [disabled]="isDisabled" >
+
+
+  <h3 [ngStyle]="style"  >Let's Rock And Roll</h3>
+
+   <!-- Event binding , refereace variable -->
+
+
+
+   <!-- <button (click) = "show(myValue.value)" type="button" >Md Omer</button> -->
+
+  <!--  Two way Binding  -->
+   <input #userName [(ngModel)]="username" type="text">
+   <h3>{{username}}</h3>
+
+
+   <button (click) = "show(userName.value)" type="button" >Click</button> <br><br>
+
+    <!-- ngIf , ngElse , ngThen -->
+   <div *ngIf = "dis;then Then ; else Else "   >NGIF</div>
+    <ng-template #Then >
+        <div >
+        NGThen
+        </div>
+    </ng-template>
+    <ng-template #Else >
+        <div >
+        NGelse
+       </div>
+    </ng-template>
+
+     <!-- component interection with input  -->
+      {{ parentData }}
+
+
+      <!-- component interection with output  -->
+
+
+      <button (click)="fireEvent()" >Send event</button>
+
+
+
+
+
+
+
+
+
+
+
+</div>
